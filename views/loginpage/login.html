@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Telecash</title>
+		<link rel="stylesheet" type="text/css" href="/css/login.css">
+		<script type="text/javascript">
+			function disableBack() { window.history.forward(); }
+			setTimeout("disableBack()", 0);
+			window.onunload = function () { null };
+		</script>
+	</head>
+	<body>
+		<div class="navbar">
+			<div class="logo">
+				<img src="/css/logo.svg">
+			</div>
+		</div>
+		<div class="login-form">
+			<h1>Login</h1>
+			<form action="auth" method="POST">
+				<input type="text" name="username" placeholder="Username" required>
+				<input type="password" name="password" placeholder="Password" required>
+				<input type="submit">
+			</form>
+			<form action="registration" methode="get" style="margin-top: 10px;">
+				<input type="submit" value="Registration">
+			</form>
+	</body>
+</html>

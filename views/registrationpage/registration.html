@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Login Form Tutorial</title>
+		<link rel="stylesheet" href="/css/registration.css">
+		<script type="text/javascript">
+			var check = function() {
+				if (document.getElementById('password').value ==
+					document.getElementById('confirm_password').value) {
+					document.getElementById('message').style.color = 'green';
+					document.getElementById('message').innerHTML = 'matching';
+					document.getElementById('submit_button').disabled = false;
+					document.getElementById('submit_button').style.color = 'white';
+				} else {
+					document.getElementById('message').style.color = 'red';
+					document.getElementById('message').innerHTML = 'not matching';
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="navbar">
+			<div class="logo">
+				<img src="/css/logo.svg">
+			</div>
+		</div>
+		<div class="login-form">
+			<h1>Registration</h1>
+			<form action="authRegistration" method="POST">
+				<input type="text" name="username" placeholder="Username" required>
+				<input id="password" type="password" name="password" placeholder="Password" onkeyup='check();' required>
+				<input id="confirm_password" type="password" name="confirm_password" placeholder="Repeat Password" onkeyup='check();'required>
+				<div class="message"><span  id='message'></span></div>
+				<input id="submit_button" disabled="disabled" style="color:red;margin-bottom: 10px;" type="submit">
+				
+			</form>
+			<form action="back" methode="get" style="margin-top: 10px;">
+				<input type="submit" value="Back">
+			</form>
+		</div>
+	</body>
+</html>

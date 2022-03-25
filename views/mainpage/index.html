@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Login Form Tutorial</title>
+		<link rel="stylesheet" href="/css/index.css">
+	</head>
+	<body>
+		<div class="navbar">
+			<div class="logo">
+				<img src="/css/logo.svg">
+			</div>
+		</div>
+		
+		<div id="loadingDiv" class="loading" style="display: none;">Loading&#8230;</div>
+		<div class="login-form">
+			<h1>INSERT CSV</h1>
+			<form method="POST" action="/bulkSQL" enctype="multipart/form-data">
+                <input type="file" name="file">
+             
+                <input type="submit" class="button" onclick="showDiv()">
+            </form>
+            
+		</div>
+		
+		<div id="loadingAttention" class="attention" style="display: none;">
+			<h2>Please wait for a moment! Do not touch anything!</h2>
+		</div>
+		<script>
+			
+
+			function showDiv() {
+				document.getElementById('loadingDiv').style.display = "block";
+				document.getElementById('loadingAttention').style.display = "block";
+				}	
+		</script>
+	</body>
+</html>
